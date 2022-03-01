@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Box, Button, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import { useNavigate } from 'react-router-dom';
+import { Box } from "@chakra-ui/react";
 
 export const Main = () => {
 

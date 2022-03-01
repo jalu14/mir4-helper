@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Box, Button, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
+import { IMap } from "../../core/interfaces";
 
 export const Map = () => {
 
@@ -266,46 +267,3 @@ const GlobalMap: IMap = {
         }
     ]
 }
-
-interface IMap {
-    id: string;
-    name: string;
-    image: string;
-    areas?: IMap[];
-    markers?: IMarkerArea[] | IMarkerResource[] | IMarkerMob[];
-    isOpen?: boolean;
-}
-
-interface IMarker {
-    name?: string;
-    size: ISize;
-    position: IXY;
-}
-
-interface IXY {
-    x: number;
-    y: number;
-}
-
-interface ISize {
-    height: number;
-    width: number;
-}
-
-interface IMarkerArea extends IMarker {
-    areaId: string;
-}
-
-interface IMarkerResource extends IMarker {
-    type: 'ore' | 'energy' | 'herb' | 'darkSteel' | 'chest';
-    rarity: 'gray' | 'green' | 'blue' | 'red' | 'yellow'
-}
-
-interface IMarkerMob extends IMarker {
-    type: 'common' | 'elite' | 'unique' | 'boss';
-    image: string;
-}
-
-// interface IDrop {
-
-// }
