@@ -25,6 +25,7 @@ const DesktopNav = () => {
                 spacing="16">
                 <DesktopLink text="Map" link="map" />
                 <DesktopLink text="Items" link="items" />
+                <DesktopLink text="Monsters" link="monsters" />
             </Stack>
 
             <DesktopHeading />
