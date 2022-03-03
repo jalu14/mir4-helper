@@ -1,5 +1,6 @@
-import { Flex, Input, InputGroup, InputLeftElement, InputRightElement, Kbd, Stack, Text } from "@chakra-ui/react";
+import { Flex, Stack, Text } from "@chakra-ui/react";
 import { Link as RRDLink } from "react-router-dom";
+import { SearchBar } from "./Searchbar";
 
 export const Navbar = () => {
     return (
@@ -38,23 +39,7 @@ const DesktopNav = () => {
                 justifyContent="flex-end"
                 width="100%"
                 ml="20">
-                <InputGroup maxW="60%" display={["none", "none", "none", "block"]}>
-                    <InputLeftElement
-                        pointerEvents='none'
-                        children={<i className="bx bx-search" />}
-                    />
-                    <Input variant="filled" placeholder="Search..." />
-                    <InputRightElement
-                        right={8}
-                        pointerEvents='none'
-                        children={
-                            <Stack direction="row">
-                                <Kbd>alt</Kbd>
-                                <Text>+</Text>
-                                <Kbd>K</Kbd>
-                            </Stack>}>
-                    </InputRightElement>
-                </InputGroup>
+                <SearchBar />
                 <DesktopLink text="Extras" link="extras" />
             </Stack>
 
@@ -64,7 +49,7 @@ const DesktopNav = () => {
 
 const DesktopLink = ({ text, link }) => {
     return (
-        <RRDLink to={link} style={{display: 'flex'}}>
+        <RRDLink to={link} style={{ display: 'flex' }}>
             <Text
                 p={2}
                 fontSize="lg"
@@ -84,7 +69,7 @@ const DesktopLink = ({ text, link }) => {
 
 const DesktopHeading = () => {
     return (
-        <RRDLink to="/" style={{display: 'flex'}}>
+        <RRDLink to="/" style={{ display: 'flex' }}>
             <Text
                 p={2}
                 fontSize="xl"
